@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Timoth&#xE9;e CV App</title>
+      <link href="css/reset.css" rel="stylesheet">
+      <link href="css/ionic.css" rel="stylesheet">
+      <link href="css/style.css" rel="stylesheet">
+
+
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+
+
+
+      <!-- JQUERY MOBILE-->
+
+      <!--<link rel="stylesheet" href="css/jquery.mobile.collapse.css">-->
+      <script src="js/jquery.js"></script>
+      <script src="js/jquery.mobile.js"></script>
+
+      <!--NE FONCTIONNE PAS-->
+      <!--<link href="css/jquery.mobile.collapsible.css" rel="stylesheet">-->
+
+      <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.css">-->
+
+
+<!--CUSTOM-->
+  <!--    <link rel="stylesheet" href="custom/jquery.mobile.custom.structure.css">
+      <link rel="stylesheet" href="custom/jquery.mobile.custom.theme.css">-->
+      <!--<script src="custom/jquery.mobile.custom.js"></script>-->
+
+      <script>
+          $(document).ready(function() {
+              $(".padcollapse").click(function () {
+
+                  $padcollapse = $(this);
+                  //getting the next element
+                  $contento = $padcollapse.next();
+                  //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+                  $contento.slideToggle(500, function () {
+                      //execute this after slideToggle is done
+                      //change text of header based on visibility of content div
+//                      $padcollapse.text(function () {
+//                          //change text based on condition
+//                          return $contento.is(":visible") ? "Collapse" : "Expand";
+//                      });
+                  });
+
+              });
+          });
+              $(document).ready(function() {
+
+               function ContentController($scope, $ionicSideMenuDelegate) {
+                 $scope.toggleLeft = function() {
+                           $ionicSideMenuDelegate.toggleLeft();
+                         };
+               }
+
+          });
+      </script>
+
+
+  </head>
+
+  <body>
+      <div class="bar bar-header bar-positive" style="position:relative;">
+
+          <button class="button icon ion-navicon"></button>
+          <div class="h1 title">CV de Timoth&#xE9;e Dorand</div>
+      </div>
+
+
+      <ion-side-menus>
+          <!--*-->   <!-- Left menu -->
+          <!--*-->   <ion-side-menu side="left">
+          <!--*-->   </ion-side-menu>
+          <!--*-->
+          <!--*-->   <ion-side-menu-content>
+                    Projet #1
+          Projets #2
+          <!--*-->   <!-- Main content, usually <ion-nav-view> -->
+          <!--*-->   </ion-side-menu-content>
+          <!--*-->
+          <!--*-->   <!-- Right menu -->
+          <!--*-->   <ion-side-menu side="right">
+          <!--*-->   </ion-side-menu>
+          <!--*-->
+          <!--*--> </ion-side-menus>
+<ion-content>
+          <div class="intro">
+              <img src="img/profil.gif" alt="profil">
+              <h1>Timoth&#xE9;e Dorand</h1>
+              <h3>18 ans,<br> timothee-dorand.fr</h3>
+
+          </div>
+
+
+          <div class="pads">
+              <div class="padcollapse button button-positive">
+              <h4>Comp&#xE9;tences</h4>
+              </div>
+
+
+              <div class="card contento">
+                  <div class="item item-divider">
+                      <h2><strong>Comp&#xE9;tences</strong></h2>
+                  </div>
+                  <div class="item item-divider">
+                      Logiciels et Technos
+                  </div>
+                  <div class=" item item-text-wrap">
+                      Photoshop<br>
+                      Html/Css<br>
+                      Php<br>
+                      Final Cut Pro
+                  </div>
+                  <div class="item item-divider">
+
+                      Langues
+                  </div>
+                  <div class="item item-text-wrap">
+                      <strong>Fran&#xE7;ais:</strong> langue maternelle<br>
+                      Anglais: courant<br>
+                      Allemand: courant<br>
+                      Polonais: parl&#xE9;, langue maternelle<br>
+                  </div>
+              </div>
+
+               <div class="padcollapse button button-assertive">
+                <h4>Experiences</h4>
+              </div>
+
+              <div class="card contento">
+              <div class="item item-divider">
+                  <h2><strong>Experiences</strong></h2>
+              </div>
+              <div class="item item-divider">
+                 2014
+              </div>
+              <div class=" item item-text-wrap">
+                  Bac ES, mention AB	, allemend Europ&#xE9;en<br>
+                  Mise en place de fiches de r&#xE9;vision du Bac pour le lyc&#xE9;e,
+                  partag&#xE9;es sur Google Drive
+              </div>
+              <div class="item item-divider">
+
+                  2014-2015
+              </div>
+              <div class="item item-text-wrap">
+                  Ann&#xE9;e Pr&#xE9;paratoire &#xE0;
+                  l&#x2019;Institut de l&#x2019;Internet et du Multim&#xE9;dia (IIM)<br>
+                  Responsable-animateur du Club Photo-Vid&#xE9;o,
+                  (15 membres actifs), activit&#xE9; de portrait sur demande<br>
+                  Cr&#xE9;ation de diff&#xE9;rents sites web<br>
+                  Stage de deux mois en entreprise
+              </div>
+          </div>
+               <div class="padcollapse button button-balanced">
+                <h4>Projets</h4>
+              </div>
+              <div class="list card contento">
+
+                  <div class="item item-avatar">
+                      <img src="mcfly.jpg">
+                      <h2>Marty McFly</h2>
+                      <p>November 05, 1955</p>
+                  </div>
+
+                  <div class="item item-body">
+                      <img class="full-image" src="delorean.jpg">
+                      <p>
+                          This is a &quot;Facebook&quot; styled Card. The header is created from a Thumbnail List item,
+                          the content is from a card-body consisting of an image and paragraph text. The footer
+                          consists of tabs, icons aligned left, within the card-footer.
+                      </p>
+                      <p>
+                          <a href="#" class="subdued">1 Like</a>
+                          <a href="#" class="subdued">5 Comments</a>
+                      </p>
+                  </div>
+
+                  <div class="item tabs tabs-secondary tabs-icon-left">
+                      <a class="tab-item" href="#">
+                          <i class="icon ion-thumbsup"></i>
+                          Like
+                      </a>
+                      <a class="tab-item" href="#">
+                          <i class="icon ion-chatbox"></i>
+                          Comment
+                      </a>
+                      <a class="tab-item" href="#">
+                          <i class="icon ion-share"></i>
+                          Share
+                      </a>
+                  </div>
+
+              </div>
+               <div class="padcollapse button button-energized">
+                <h4>Centre d&apos;int&#xE9;r&#xEA;ts</h4>
+                </div>
+
+
+          </div>
+</ion-content>
+          <!--<div class="pads">
+
+              <button class="button pad button-positive">
+                 Comp&#xE9;tences
+
+
+              </button>
+
+                  <button on-tap="onTap()" class="button pad button-calm">
+                  Experiences
+              </button>
+
+              <button on-tap="onTap()" class="button pad button-balanced">
+                Projets
+              </button>
+
+              <button on-tap="onTap()" class="button pad button-energized">
+                Centres d&apos;int&#xE9;rets
+              </button>
+          </div>-->
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="bar bar-footer">
+          <button class="button button-clear">Left</button>
+          <div class="title">Octobre 2015</div>
+          <button class="button button-clear">Right</button>
+      </div>
+  </body>
+
+
+
+
+
+<!--
+ STARTER TEMPLATES
+
+ <body ng-app="starter">
+    &lt;!&ndash;
+      The nav bar that will be updated as we navigate between views.
+    &ndash;&gt;
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    &lt;!&ndash;
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    &ndash;&gt;
+    <ion-nav-view></ion-nav-view>
+  -->
+
+
+
+</html>
